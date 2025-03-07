@@ -32,25 +32,25 @@ bash fontconfig mkdir mktemp wget unzip sudo sort uniq grep
 ### Hack Nerd Font
 
 ```bash
-nerd_font_name="Hack" wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh | bash
+nerd_font_name="Hack" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### FiraCode Nerd Font
 
 ```bash
-nerd_font_name="FiraCode" wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh | bash
+nerd_font_name="FiraCode" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### JetBrainsMono Nerd Font
 
 ```bash
-nerd_font_name="JetBrainsMono" wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh | bash
+nerd_font_name="JetBrainsMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### Agave Nerd Font
 
 ```bash
-nerd_font_name="Agave" wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh | bash
+nerd_font_name="Agave" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### OTHER FONTS
@@ -67,7 +67,7 @@ is `Hack.zip`.
 You just pass it's name _without_ **.zip**, `Hack`, like this:
 
 ```bash
-nerd_font_name="Hack" wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh | bash
+nerd_font_name="Hack" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 And [install.sh](./install.sh) will automatically download, unzip and move
