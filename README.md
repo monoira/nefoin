@@ -10,6 +10,20 @@
     - [FiraCode Nerd Font](#firacode-nerd-font)
     - [JetBrainsMono Nerd Font](#jetbrainsmono-nerd-font)
     - [Agave Nerd Font](#agave-nerd-font)
+    - [Iosevka Nerd Font](#iosevka-nerd-font)
+    - [Meslo Nerd Font](#meslo-nerd-font)
+    - [CascadiaCode Nerd Font](#cascadiacode-nerd-font)
+    - [CommitMono Nerd Font](#commitmono-nerd-font)
+    - [VictorMono Nerd Font](#victormono-nerd-font)
+    - [DejaVuSansMono Nerd Font](#dejavusansmono-nerd-font)
+    - [UbuntuMono Nerd Font](#ubuntumono-nerd-font)
+    - [SourceCodePro Nerd Font](#sourcecodepro-nerd-font)
+    - [Terminus Nerd Font](#terminus-nerd-font)
+    - [RobotoMono Nerd Font](#robotomono-nerd-font)
+    - [LiberationMono Nerd Font](#liberationmono-nerd-font)
+    - [Mononoki Nerd Font](#mononoki-nerd-font)
+    - [SpaceMono Nerd Font](#spacemono-nerd-font)
+    - [Cousine Nerd Font](#cousine-nerd-font)
     - [OTHER FONTS](#other-fonts)
   - [HOW DOES IT WORK](#how-does-it-work)
   <!--toc:end-->
@@ -56,6 +70,90 @@ nerd_font_name="JetBrainsMono" bash <(wget -qO- https://raw.githubusercontent.co
 
 ```bash
 nerd_font_name="Agave" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### Iosevka Nerd Font
+
+```bash
+nerd_font_name="Iosevka" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### Meslo Nerd Font
+
+```bash
+nerd_font_name="Meslo" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### CascadiaCode Nerd Font
+
+```bash
+nerd_font_name="CascadiaCode" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### CommitMono Nerd Font
+
+```bash
+nerd_font_name="CommitMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### VictorMono Nerd Font
+
+```bash
+nerd_font_name="VictorMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### DejaVuSansMono Nerd Font
+
+```bash
+nerd_font_name="DejaVuSansMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### UbuntuMono Nerd Font
+
+```bash
+nerd_font_name="UbuntuMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### SourceCodePro Nerd Font
+
+```bash
+nerd_font_name="SourceCodePro" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### Terminus Nerd Font
+
+```bash
+nerd_font_name="Terminus" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### RobotoMono Nerd Font
+
+```bash
+nerd_font_name="RobotoMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### LiberationMono Nerd Font
+
+```bash
+nerd_font_name="LiberationMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### Mononoki Nerd Font
+
+```bash
+nerd_font_name="Mononoki" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### SpaceMono Nerd Font
+
+```bash
+nerd_font_name="SpaceMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+```
+
+### Cousine Nerd Font
+
+```bash
+nerd_font_name="Cousine" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### OTHER FONTS
