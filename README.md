@@ -3,6 +3,7 @@
 <!--toc:start-->
 
 - [Nefoin](#nefoin)
+  - [SHOWCASE](#showcase)
   - [DEPENDENCIES](#dependencies)
   - [EXAMPLES](#examples)
     - [Hack Nerd Font](#hack-nerd-font)
@@ -18,6 +19,10 @@
 
 No manual download or cloning required.  
 Just pass Nerd Font name as an argument in CLI and rest is automatically done.
+
+## SHOWCASE
+
+![showcase](./docs/showcase.gif)
 
 ## DEPENDENCIES
 
