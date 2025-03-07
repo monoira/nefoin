@@ -9,6 +9,7 @@
     - [FiraCode Nerd Font](#firacode-nerd-font)
     - [JetBrainsMono Nerd Font](#jetbrainsmono-nerd-font)
     - [Agave Nerd Font](#agave-nerd-font)
+    - [OTHER FONTS](#other-fonts)
   - [HOW DOES IT WORK](#how-does-it-work)
   <!--toc:end-->
 
@@ -51,6 +52,8 @@ nerd_font_name="JetBrainsMono" wget -qO- https://raw.githubusercontent.com/monoi
 ```bash
 nerd_font_name="Agave" wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh | bash
 ```
+
+### OTHER FONTS
 
 You can type in quotes any other Nerd Font from
 [ryanoasis/nerd-fonts/releases](https://github.com/ryanoasis/nerd-fonts/releases/)
