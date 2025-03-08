@@ -193,6 +193,9 @@ On Linux:
 `$HOME/.local/share/fonts`
 
 If that directory doesn't exist, [install.sh](./install.sh) will create it.  
+[install.sh](./install.sh) also checks via `grep` if you already have font with
+similar name and prompts you for installation confirmation if you do.
+This way chance of you downloading same Nerd Font twice is lower.  
 There is no residual files left either.  
 No manual download or cloning required.  
 It just works.
