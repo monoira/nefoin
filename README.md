@@ -44,7 +44,7 @@ Just pass Nerd Font name as an argument in CLI and rest is automatically done.
 - Have Following packages / utilities:
 
 ```bash
-fontconfig curl bash which mkdir mktemp unzip sudo sort uniq grep
+fontconfig  curl
 ```
 
 If you are on MacOS, You probably will only lack `fontconfig`,

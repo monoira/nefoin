@@ -14,15 +14,6 @@ dependencies=(
   fc-list
   fc-cache
   curl
-  bash
-  which
-  mkdir
-  mktemp
-  unzip
-  sudo
-  sort
-  uniq
-  grep
 )
 
 all_dependencies_are_installed=true
@@ -78,7 +69,7 @@ if $all_dependencies_are_installed; then
     echo "<--- Font / Fonts with name similar to $nerd_font_name found: --->"
     fc-list : family | sort | uniq | grep "$nerd_font_name"
     read -r -p "Do you want to cancel installation of $nerd_font_name? (Y/n)" prompt_response
-    if [[ "${prompt_response,,}" == "n" ]]; then
+    if [[ $prompt_response == "n" ]]; then
       echo "<--- Installing $nerd_font_name --->"
       get_font
     else
