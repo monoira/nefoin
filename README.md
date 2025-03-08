@@ -44,7 +44,7 @@ Just pass Nerd Font name as an argument in CLI and rest is automatically done.
 - Have Following packages / utilities:
 
 ```bash
-fontconfig curl bash which mkdir mktemp unzip sudo sort uniq grep
+fontconfig curl unzip
 ```
 
 If you are on MacOS, You probably will only lack `fontconfig`,
@@ -187,10 +187,10 @@ And [install.sh](./install.sh) will automatically download, unzip and move
 it's contents to your systems fonts directory.
 
 On MacOS:  
-`/Library/Fonts`
+`$HOME/Library/Fonts`
 
 On Linux:  
-`/usr/local/share/fonts`
+`$HOME/.local/share/fonts`
 
 If that directory doesn't exist, [install.sh](./install.sh) will create it.  
 There is no residual files left either.  
