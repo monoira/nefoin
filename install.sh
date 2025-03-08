@@ -44,24 +44,24 @@ get_font() {
   # unzip the font file
   unzip "$TEMP_FONT_DIR/font.zip" -d "$TEMP_FONT_DIR"
 
-  # determine the system fonts directory based on the OS
+  # determine the user fonts directory based on the OS
   if [[ "$(uname)" == "Darwin" ]]; then
-    SYSTEM_FONTS_DIR="/Library/Fonts"
+    USER_FONTS_DIR="$HOME/Library/Fonts"
   else
-    SYSTEM_FONTS_DIR="/usr/local/share/fonts"
+    USER_FONTS_DIR="$HOME/.local/share/fonts"
   fi
 
-  # create system fonts directory if it doesn't already exist
-  sudo mkdir -p "$SYSTEM_FONTS_DIR"
+  # create user fonts directory if it doesn't already exist
+  mkdir -p "$USER_FONTS_DIR"
 
-  # move the font files to the system fonts directory
-  sudo mv "$TEMP_FONT_DIR"/*.{otf,ttf,woff,woff2,eot,svg} "$SYSTEM_FONTS_DIR" 2>/dev/null || true
+  # move the font files to the user fonts directory
+  mv "$TEMP_FONT_DIR"/*.{otf,ttf,woff,woff2,eot,svg} "$USER_FONTS_DIR" 2>/dev/null || true
 
   # update the font cache
   fc-cache -f -v
 
   # clean up temporary directory
-  sudo rm -rf "$TEMP_FONT_DIR"
+  rm -rf "$TEMP_FONT_DIR"
 }
 
 if $all_dependencies_are_installed; then
