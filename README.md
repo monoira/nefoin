@@ -184,7 +184,14 @@ nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/monoir
 ```
 
 And [install.sh](./install.sh) will automatically download, unzip and move
-it's contents to `/usr/local/share/fonts/`  
+it's contents to your systems fonts directory.
+
+On MacOS:  
+`/Library/Fonts`
+
+On Linux:  
+`/usr/local/share/fonts`
+
 If that directory doesn't exist, [install.sh](./install.sh) will create it.  
 There is no residual files left either.  
 No manual download or cloning required.  
