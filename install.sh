@@ -14,6 +14,7 @@ dependencies=(
   fc-list
   fc-cache
   curl
+  unzip
 )
 
 all_dependencies_are_installed=true
