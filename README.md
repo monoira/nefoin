@@ -40,120 +40,130 @@ Just pass Nerd Font name as an argument in CLI and rest is automatically done.
 
 ## DEPENDENCIES
 
-Be on Linux and Following Linux packages / utilities:
+- Be on Linux or MacOS.
+- Have Following packages / utilities:
 
 ```bash
-bash fontconfig mkdir mktemp wget unzip sudo sort uniq grep
+fontconfig curl bash which mkdir mktemp unzip sudo sort uniq grep
 ```
+
+If you are on MacOS, You probably will only lack `fontconfig`,
+which you can install like this:
+
+```bash
+brew install fontconfig
+```
+
+Running the script will tell you which dependencies you are missing regardless of OS.
 
 ## EXAMPLES
 
 ### Hack Nerd Font
 
 ```bash
-nerd_font_name="Hack" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### FiraCode Nerd Font
 
 ```bash
-nerd_font_name="FiraCode" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="FiraCode" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### JetBrainsMono Nerd Font
 
 ```bash
-nerd_font_name="JetBrainsMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="JetBrainsMono" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### Agave Nerd Font
 
 ```bash
-nerd_font_name="Agave" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Agave" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### Iosevka Nerd Font
 
 ```bash
-nerd_font_name="Iosevka" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Iosevka" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### Meslo Nerd Font
 
 ```bash
-nerd_font_name="Meslo" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Meslo" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### CascadiaCode Nerd Font
 
 ```bash
-nerd_font_name="CascadiaCode" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="CascadiaCode" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### CommitMono Nerd Font
 
 ```bash
-nerd_font_name="CommitMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="CommitMono" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### VictorMono Nerd Font
 
 ```bash
-nerd_font_name="VictorMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="VictorMono" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### DejaVuSansMono Nerd Font
 
 ```bash
-nerd_font_name="DejaVuSansMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="DejaVuSansMono" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### UbuntuMono Nerd Font
 
 ```bash
-nerd_font_name="UbuntuMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="UbuntuMono" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### SourceCodePro Nerd Font
 
 ```bash
-nerd_font_name="SourceCodePro" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="SourceCodePro" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### Terminus Nerd Font
 
 ```bash
-nerd_font_name="Terminus" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Terminus" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### RobotoMono Nerd Font
 
 ```bash
-nerd_font_name="RobotoMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="RobotoMono" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### LiberationMono Nerd Font
 
 ```bash
-nerd_font_name="LiberationMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="LiberationMono" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### Mononoki Nerd Font
 
 ```bash
-nerd_font_name="Mononoki" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Mononoki" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### SpaceMono Nerd Font
 
 ```bash
-nerd_font_name="SpaceMono" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="SpaceMono" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### Cousine Nerd Font
 
 ```bash
-nerd_font_name="Cousine" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Cousine" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 ### OTHER FONTS
@@ -170,7 +180,7 @@ is `Hack.zip`.
 You just pass it's name _without_ **.zip**, `Hack`, like this:
 
 ```bash
-nerd_font_name="Hack" bash <(wget -qO- https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
 ```
 
 And [install.sh](./install.sh) will automatically download, unzip and move

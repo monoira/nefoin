@@ -11,12 +11,13 @@
 # BAD:  "hack.zip"
 
 dependencies=(
-  bash
   fc-list
   fc-cache
+  curl
+  bash
+  which
   mkdir
   mktemp
-  wget
   unzip
   sudo
   sort
@@ -38,16 +39,23 @@ get_font() {
   local nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
 
   # download the font zip file
-  wget -O "$TEMP_FONT_DIR/font.zip" "$nerd_fonts_repo_url"
+  curl -L -o "$TEMP_FONT_DIR/font.zip" "$nerd_fonts_repo_url"
 
   # unzip the font file
   unzip "$TEMP_FONT_DIR/font.zip" -d "$TEMP_FONT_DIR"
 
-  # create system fonts directory if it doesn't already exists
-  sudo mkdir -p /usr/local/share/fonts/
+  # determine the system fonts directory based on the OS
+  if [[ "$(uname)" == "Darwin" ]]; then
+    SYSTEM_FONTS_DIR="/Library/Fonts"
+  else
+    SYSTEM_FONTS_DIR="/usr/local/share/fonts"
+  fi
+
+  # create system fonts directory if it doesn't already exist
+  sudo mkdir -p "$SYSTEM_FONTS_DIR"
 
   # move the font files to the system fonts directory
-  sudo mv "$TEMP_FONT_DIR"/*.{otf,ttf,woff,woff2,oet,svg} /usr/local/share/fonts/
+  sudo mv "$TEMP_FONT_DIR"/*.{otf,ttf,woff,woff2,eot,svg} "$SYSTEM_FONTS_DIR" 2>/dev/null || true
 
   # update the font cache
   fc-cache -f -v
@@ -60,7 +68,7 @@ if $all_dependencies_are_installed; then
   echo "<--- Installing $nerd_font_name --->"
 
   # check if similar named font is already installed
-  similar_named_font_found=$(fc-list : family | \sort | \uniq | \grep "$nerd_font_name")
+  similar_named_font_found=$(fc-list : family | sort | uniq | grep "$nerd_font_name")
 
   # if similarly named font is not installed, runs the following script
   # else, echos similarly named fonts. All of them.
@@ -68,9 +76,9 @@ if $all_dependencies_are_installed; then
     get_font
   else
     echo "<--- Font / Fonts with name similar to $nerd_font_name found: --->"
-    fc-list : family | \sort | \uniq | \grep "$nerd_font_name"
+    fc-list : family | sort | uniq | grep "$nerd_font_name"
     read -r -p "Do you want to cancel installation of $nerd_font_name? (Y/n)" prompt_response
-    if [[ $prompt_response == "n" ]]; then
+    if [[ "${prompt_response,,}" == "n" ]]; then
       echo "<--- Installing $nerd_font_name --->"
       get_font
     else
@@ -79,12 +87,12 @@ if $all_dependencies_are_installed; then
   fi
 
 else
-  echo "<--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --->"
+  echo "<--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --->"
   echo "<--- ONE OR MORE OF THE REQUIRED DEPENDENCIES ARE NOT INSTALLED!!! --->"
-  echo "<--- The dependencies: --->"
+  echo "<--- dependencies: --->"
 
   # checks each package individually to see which packages
-  # are not installed and echos them out if they are not installed
+  # are not installed and echos them all out with their status of installation
   for dep_pkg in "${dependencies[@]}"; do
     if [ "$(which "$dep_pkg")" ]; then
       echo "<--- $dep_pkg - Status: Installed. --->"
