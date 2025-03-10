@@ -5,6 +5,7 @@
 - [Nefoin](#nefoin)
   - [SHOWCASE](#showcase)
   - [DEPENDENCIES](#dependencies)
+  - [TRY IT WITH DOCKER](#try-it-with-docker)
   - [EXAMPLES](#examples)
     - [Hack Nerd Font](#hack-nerd-font)
     - [FiraCode Nerd Font](#firacode-nerd-font)
@@ -54,7 +55,19 @@ which you can install like this:
 brew install fontconfig
 ```
 
-Running the script will tell you which dependencies you are missing regardless of OS.
+Running the script will tell you which dependencies
+you are missing regardless of your OS.
+
+## TRY IT WITH DOCKER
+
+```bash
+docker run -it --rm ubuntu:latest bash -uelic '
+  apt update -y
+  apt install -y fontconfig curl unzip
+  nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+  bash
+'
+```
 
 ## EXAMPLES
 
