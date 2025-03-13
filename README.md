@@ -27,6 +27,7 @@
     - [Cousine Nerd Font](#cousine-nerd-font)
     - [OTHER FONTS](#other-fonts)
   - [HOW DOES IT WORK](#how-does-it-work)
+  - [WHY SHOULD I USE THIS OVER getnf/getnf](#why-should-i-use-this-over-getnfgetnf)
   <!--toc:end-->
 
 **ne**rd **fo**nt **in**staller let's you download any Nerd Font from
@@ -212,3 +213,19 @@ This way chance of you downloading same Nerd Font twice is lower.
 There is no residual files left either.  
 No manual download or cloning required.  
 It just works.
+
+## WHY SHOULD I USE THIS OVER getnf/getnf
+
+1. Faster -- Less Is More if you just want 1 or 2 fonts.
+1. Simpler to Use.
+1. Simpler to Automate.
+1. Simpler to understand the code,
+   it's literally one `~100` line file at [install.sh](./install.sh).  
+   You can fork it and use it for your own purposes.
+1. [getnf](https://github.com/getnf/getnf) is licensed under GPL3 license,
+   which means that you can't use it's code in closed source,  
+   non-GPL licensed project since GPL-3.0 License,  
+   which requires derivative works to also be open-source
+   under the **same** license.  
+   This is **NOT** to hate on Richard Stallman or GPL licenses.  
+   Just listing one of pro's for _you_.

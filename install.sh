@@ -56,11 +56,21 @@ get_font() {
   rm -rf "$TEMP_FONT_DIR"
 }
 
+# this will be overwritten with Nerd Font name given as an argument to starting script
+# eg: nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
+# will change nerd_font_name from "" to "Hack"
+nerd_font_name=""
+
+if [ -z "$nerd_font_name" ]; then
+  echo "<--- Provide Nerd Font Name --->"
+  exit 1
+fi
+
 if $all_dependencies_are_installed; then
   echo "<--- Installing $nerd_font_name --->"
 
   # check if similar named font is already installed
-  similar_named_font_found=$(fc-list : family | sort | uniq | grep "$nerd_font_name")
+  similar_named_font_found=$(fc-list : family | \sort | \uniq | \grep "$nerd_font_name")
 
   # if similarly named font is not installed, runs the following script
   # else, echos similarly named fonts. All of them.
@@ -68,7 +78,7 @@ if $all_dependencies_are_installed; then
     get_font
   else
     echo "<--- Font / Fonts with name similar to $nerd_font_name found: --->"
-    fc-list : family | sort | uniq | grep "$nerd_font_name"
+    fc-list : family | \sort | \uniq | \grep "$nerd_font_name"
     read -r -p "Do you want to cancel installation of $nerd_font_name? (Y/n)" prompt_response
     if [[ $prompt_response == "n" ]]; then
       echo "<--- Installing $nerd_font_name --->"
@@ -92,4 +102,5 @@ else
       echo "<--- $dep_pkg - Status: NOT INSTALLED!!! --->"
     fi
   done
+  exit 1
 fi
