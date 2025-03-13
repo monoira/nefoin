@@ -12,7 +12,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          sudo apt-get update
+          sudo apt-get update -y
+          sudo apt-get install -y fontconfig curl unzip
           sudo apt-get install -y shfmt
 
       - name: Style Check
@@ -27,7 +28,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          sudo apt-get update
+          sudo apt-get update -y
+          sudo apt-get install -y fontconfig curl unzip
           sudo apt-get install -y shellcheck
 
       - name: Lint
