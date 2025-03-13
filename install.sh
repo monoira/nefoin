@@ -56,10 +56,8 @@ get_font() {
   rm -rf "$TEMP_FONT_DIR"
 }
 
-# this will be overwritten with Nerd Font name given as an argument to starting script
-# eg: nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/monoira/nefoin/main/install.sh)
-# will change nerd_font_name from "" to "Hack"
-nerd_font_name=""
+# Use first argument if provided, otherwise use the environment variable, if set
+nerd_font_name="${1:-$nerd_font_name}"
 
 if [ -z "$nerd_font_name" ]; then
   echo "<--- Provide Nerd Font Name --->"
