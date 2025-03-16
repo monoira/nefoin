@@ -81,6 +81,7 @@ if $all_dependencies_are_installed; then
     if [[ $prompt_response == "n" ]]; then
       echo "<--- Installing $nerd_font_name --->"
       get_font
+      echo "<--- $nerd_font_name installed. --->"
     else
       echo "<--- Installation of $nerd_font_name cancelled --->"
     fi
