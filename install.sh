@@ -25,7 +25,7 @@ for dep in "${dependencies[@]}"; do
 done
 
 get_font() {
-  # Create a temporary directory
+  # create a temporary directory
   TEMP_FONT_DIR=$(mktemp --directory)
 
   local nerd_fonts_repo_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$nerd_font_name.zip"
@@ -47,16 +47,18 @@ get_font() {
   mkdir -p "$USER_FONTS_DIR"
 
   # move the font files to the user fonts directory
-  mv "$TEMP_FONT_DIR"/*.{otf,ttf,woff,woff2,eot,svg} "$USER_FONTS_DIR" 2>/dev/null || true
+  mv "$TEMP_FONT_DIR"/*.{otf,ttf,woff,woff2,eot,svg} "$USER_FONTS_DIR" 2>/dev/null
 
   # update the font cache
   fc-cache -f -v
+
+  echo "<--- $nerd_font_name installed. --->"
 
   # clean up temporary directory
   rm -rf "$TEMP_FONT_DIR"
 }
 
-# Use first argument if provided, otherwise use the environment variable, if set
+# placeholder for nerd_font_name argument given to install.sh script
 nerd_font_name="${1:-$nerd_font_name}"
 
 if [ -z "$nerd_font_name" ]; then
@@ -81,7 +83,6 @@ if $all_dependencies_are_installed; then
     if [[ $prompt_response == "n" ]]; then
       echo "<--- Installing $nerd_font_name --->"
       get_font
-      echo "<--- $nerd_font_name installed. --->"
     else
       echo "<--- Installation of $nerd_font_name cancelled --->"
     fi
