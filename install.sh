@@ -18,8 +18,8 @@ dependencies=(
 )
 
 all_dependencies_are_installed=true
-for dep_pkg in "${dependencies[@]}"; do
-  if [ -z "$(which "$dep_pkg")" ]; then
+for dep in "${dependencies[@]}"; do
+  if [ -z "$(which "$dep")" ]; then
     all_dependencies_are_installed=false
   fi
 done
@@ -81,6 +81,7 @@ if $all_dependencies_are_installed; then
     if [[ $prompt_response == "n" ]]; then
       echo "<--- Installing $nerd_font_name --->"
       get_font
+      echo "<--- $nerd_font_name installed. --->"
     else
       echo "<--- Installation of $nerd_font_name cancelled --->"
     fi
@@ -93,11 +94,11 @@ else
 
   # checks each package individually to see which packages
   # are not installed and echos them all out with their status of installation
-  for dep_pkg in "${dependencies[@]}"; do
-    if [ "$(which "$dep_pkg")" ]; then
-      echo "<--- $dep_pkg - Status: Installed. --->"
+  for dep in "${dependencies[@]}"; do
+    if [ "$(which "$dep")" ]; then
+      echo "<--- $dep - Status: Installed. --->"
     else
-      echo "<--- $dep_pkg - Status: NOT INSTALLED!!! --->"
+      echo "<--- $dep - Status: NOT INSTALLED!!! --->"
     fi
   done
   exit 1

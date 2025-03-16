@@ -1,10 +1,10 @@
-name: lint using shellcheck
+name: test
 
 on: [push, pull_request]
 
 jobs:
   lint:
-    name: start linting
+    name: start testing
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -13,7 +13,8 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y shellcheck
+          sudo apt-get install -y curl fontconfig unzip
 
-      - name: Lint install.sh
-        run: shellcheck install.sh
+      - name: Test font installation via local install.sh
+        run: |
+          nerd_font_name="Hack" bash ./install.sh

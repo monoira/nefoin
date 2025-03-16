@@ -221,10 +221,10 @@ It just works.
 1. Simpler to Automate.
 1. Simpler to understand the code,
    it's literally one `~100` line file at [install.sh](./install.sh).  
-   You can fork it and use it for your own purposes.
-1. [getnf](https://github.com/getnf/getnf) is licensed under GPL3 license,
+   You can even fork it and use it for your own purposes.
+1. [getnf](https://github.com/getnf/getnf) is licensed under GPL-3.0 license,
    which means that you can't use it's code in closed source,  
-   non-GPL licensed project since GPL-3.0 License,  
+   non-GPL licensed project since it uses GPL-3.0 license,  
    which requires derivative works to also be open-source
    under the **same** license.  
    This is **NOT** to hate on Richard Stallman or GPL licenses.  
