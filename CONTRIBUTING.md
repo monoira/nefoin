@@ -1,8 +1,8 @@
-# CONTRIBUTING.md
+# CONTRIBUTING
 
 <!--toc:start-->
 
-- [CONTRIBUTING.md](#contributingmd)
+- [CONTRIBUTING](#contributing)
   - [git branch names](#git-branch-names)
   - [conventional commits](#conventional-commits)
   - [todo-comments](#todo-comments)
@@ -73,18 +73,37 @@ normal comment without any such keywords at the start.
 
 ## how to run tests
 
-1. be on Linux or MacOS
-1. fork the repo
-1. create new branch, let's call it `refactor/install-script`
-1. running this should work:
+`INFO:`  
+Linux _fonts directory_ : `$HOME/.local/share/fonts`
+MacOS _fonts directory_ : `$HOME/Library/Fonts`
 
-```bash
-nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/_YOUR_GITHUB_USERNAME_/nefoin/refactor/install-script/install.sh)
-```
+- LOCAL TESTING
 
-- `_YOUR_GITHUB_USERNAME_` being your Github username.
-- `refactor/install-script` being example branch name.
+  1. be on Linux or MacOS.
+  1. fork the repo.
+  1. create new branch, let's call it `refactor/install-script` for example.
+  1. make changes.
+  1. run this:
 
-**OR**
-you could use docker for testing.  
-[README.md](./README.md) has a `TRY IT WITH DOCKER` example.
+  ```bash
+    nerd_font_name="Agave" bash ./install.sh
+  ```
+
+  1. if font appears in your _fonts directory_, install.sh script worked worked.
+
+- REMOTE TESTING
+
+  1. be on Linux or MacOS.
+  1. fork the repo.
+  1. create new branch, let's call it `refactor/install-script` for example.
+  1. make changes.
+  1. test via `LOCAL TESTING`.
+  1. push changes to **your** repository.
+  1. then running this should work:
+
+  ```bash
+  nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/_YOUR_GITHUB_USERNAME_/nefoin/refactor/install-script/install.sh)
+  ```
+
+  - `_YOUR_GITHUB_USERNAME_` being your Github username.
+  - `refactor/install-script` being example branch name.
