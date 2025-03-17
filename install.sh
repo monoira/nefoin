@@ -58,7 +58,7 @@ get_font() {
   rm -rf "$TEMP_FONT_DIR"
 }
 
-# placeholder for nerd_font_name argument given to install.sh script
+# placeholder for nerd_font_name to be given as an argument to install.sh script
 nerd_font_name="${1:-$nerd_font_name}"
 
 if [ -z "$nerd_font_name" ]; then
@@ -91,7 +91,7 @@ if $all_dependencies_are_installed; then
 else
   echo "<--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --->"
   echo "<--- ONE OR MORE OF THE REQUIRED DEPENDENCIES ARE NOT INSTALLED!!! --->"
-  echo "<--- dependencies: --->"
+  echo "<--- DEPENDENCIES: --->"
 
   # checks each package individually to see which packages
   # are not installed and echos them all out with their status of installation
