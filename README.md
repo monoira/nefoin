@@ -49,7 +49,7 @@ Just pass Nerd Font name as an argument in CLI and rest is automatically done.
 fontconfig curl unzip
 ```
 
-If you are on MacOS, You probably will only lack `fontconfig`,
+If you are on MacOS, You will probably only lack `fontconfig`,
 which you can install like this:
 
 ```bash
