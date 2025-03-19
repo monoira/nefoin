@@ -9,10 +9,13 @@
   - [how to run tests](#how-to-run-tests)
   <!--toc:end-->
 
-## git branch names
-
-All work is being done on `develop` branch and eventually merged to `main`.  
+All work is being done on `develop` branch and
+eventually merged to `main` branch via fast-forward merge.  
 Send your pull request to `develop` branch. **_NOT_** `main` branch.
+
+---
+
+## git branch names
 
 | branch name | description                | example                           |
 | ----------- | -------------------------- | --------------------------------- |
@@ -30,14 +33,19 @@ Send your pull request to `develop` branch. **_NOT_** `main` branch.
 Project uses [Conventional Commits](https://www.conventionalcommits.org)
 for commit names.
 
-| abbr        | description                                   |
-| ----------- | --------------------------------------------- |
-| `feat:`     | A new feature or functionality.               |
-| `fix:`      | A bug fix.                                    |
-| `docs:`     | Changes to documentation only.                |
-| `refactor:` | Code improvements without feature changes.    |
-| `chore:`    | Maintenance tasks (e.g., dependency updates). |
-| `test:`     | Adding or updating tests.                     |
+| abbr        | description                              |
+| ----------- | ---------------------------------------- |
+| `feat:`     | Introduce new feature                    |
+| `fix:`      | Fix a bug                                |
+| `docs:`     | Update documentation                     |
+| `refactor:` | Refactor code without changing behavior  |
+| `chore:`    | Maintenance tasks and dependency updates |
+| `test:`     | Add or update tests                      |
+| `build:`    | Update build system or dependencies      |
+| `ci:`       | Modify CI/CD configuration               |
+| `perf:`     | Optimize performance                     |
+| `revert:`   | Undo previous commit                     |
+| `style:`    | Adjust code style (formatting, linting)  |
 
 Official examples
 
