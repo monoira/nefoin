@@ -82,7 +82,7 @@ normal comment without any such keywords at the start.
 ## how to run tests
 
 `INFO:`  
-Linux _fonts directory_: `$HOME/.local/share/fonts`
+Linux _fonts directory_: `$HOME/.local/share/fonts`  
 MacOS _fonts directory_: `$HOME/Library/Fonts`
 
 - LOCAL TESTING
