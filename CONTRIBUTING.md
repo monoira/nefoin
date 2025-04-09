@@ -82,32 +82,32 @@ normal comment without any such keywords at the start.
 ## how to run tests
 
 `INFO:`  
-Linux _fonts directory_ : `$HOME/.local/share/fonts`
-MacOS _fonts directory_ : `$HOME/Library/Fonts`
+Linux _fonts directory_: `$HOME/.local/share/fonts`
+MacOS _fonts directory_: `$HOME/Library/Fonts`
 
 - LOCAL TESTING
 
-  1. be on Linux or MacOS.
-  1. fork the repo.
-  1. create new branch, let's call it `refactor/install-script` for example.
-  1. make changes.
-  1. run this:
+  - be on Linux or MacOS.
+  - fork the repo.
+  - create new branch, let's call it `refactor/install-script` for example.
+  - make changes.
+  - run this:
 
   ```bash
     nerd_font_name="Agave" bash ./install.sh
   ```
 
-  1. if font appears in your _fonts directory_, install.sh script worked worked.
+  - if font appears in your _fonts directory_, install.sh script worked.
 
 - REMOTE TESTING
 
-  1. be on Linux or MacOS.
-  1. fork the repo.
-  1. create new branch, let's call it `refactor/install-script` for example.
-  1. make changes.
-  1. test via `LOCAL TESTING`.
-  1. push changes to **your** repository.
-  1. then running this should work:
+  - be on Linux or MacOS.
+  - fork the repo.
+  - create new branch, let's call it `refactor/install-script` for example.
+  - make changes.
+  - test via `LOCAL TESTING`.
+  - push changes to **your** repository.
+  - then running this should work:
 
   ```bash
   nerd_font_name="Hack" bash <(curl -fsSL https://raw.githubusercontent.com/_YOUR_GITHUB_USERNAME_/nefoin/refactor/install-script/install.sh)
