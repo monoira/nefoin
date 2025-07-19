@@ -1,13 +1,10 @@
 # CONTRIBUTING
 
-<!--toc:start-->
-
 - [CONTRIBUTING](#contributing)
   - [git branch names](#git-branch-names)
   - [conventional commits](#conventional-commits)
   - [todo-comments](#todo-comments)
   - [how to run tests](#how-to-run-tests)
-  <!--toc:end-->
 
 All work is being done on `develop` branch and
 eventually merged to `main` branch via fast-forward merge.  

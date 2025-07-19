@@ -1,7 +1,5 @@
 # Nefoin
 
-<!--toc:start-->
-
 - [Nefoin](#nefoin)
   - [SHOWCASE](#showcase)
   - [DEPENDENCIES](#dependencies)
@@ -29,7 +27,6 @@
   - [HOW DOES IT WORK](#how-does-it-work)
   - [WHY SHOULD I USE THIS OVER getnf/getnf](#why-should-i-use-this-over-getnfgetnf)
   - [DONATE](#donate)
-  <!--toc:end-->
 
 **ne**rd **fo**nt **in**staller let's you download any Nerd Font from
 [ryanoasis/nerd-fonts/releases](https://github.com/ryanoasis/nerd-fonts/releases/)
